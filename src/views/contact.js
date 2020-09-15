@@ -20,27 +20,27 @@ function Contact() {
                             <div className="md:flex flex-wrap justify-around">
                                 <a target="_blank" href="mailto:benedictashiedu@gmail.com" className="md:w-5/12">
                                     <div className="text-center bg-gray-900 rounded-lg p-4 mb-4 shadow transform hover:-translate-y-1 hover:scale-105 transition ease-in-out duration-500">
-                                        <p> <i class="fas fa-envelope mr-3"></i>benedictashiedu@gmail.com</p>
+                                        <p> <i className="fas fa-envelope mr-3"></i>benedictashiedu@gmail.com</p>
                                     </div>
                                 </a>
                                 <a target="_blank" href="https://www.linkedin.com/in/benedict-ashiedu/" className="md:w-5/12">
                                     <div className="text-center bg-gray-900 rounded-lg p-4 mb-4 shadow transform hover:-translate-y-1 hover:scale-105 transition ease-in-out duration-500">
-                                        <p> <i class="fab fa-linkedin mr-3"></i>Benedict Ashiedu</p>
+                                        <p> <i className="fab fa-linkedin mr-3"></i>Benedict Ashiedu</p>
                                     </div>
                                 </a>
                                 <a target="_blank" href="https://twitter.com/PopeAshiedu" className="md:w-5/12">
                                     <div className="text-center bg-gray-900 rounded-lg p-4 mb-4 transform hover:-translate-y-1 hover:scale-105 transition ease-in-out duration-500">
-                                        <p> <i class="fab fa-twitter mr-3"></i>@PopeAshiedu</p>
+                                        <p> <i className="fab fa-twitter mr-3"></i>@PopeAshiedu</p>
                                     </div>
                                 </a>
                                 <a target="_blank" href="https://www.facebook.com/bennyeasy.ashiedu" className="md:w-5/12">
                                     <div className="text-center bg-gray-900 rounded-lg p-4 mb-4 transform hover:-translate-y-1 hover:scale-105 transition ease-in-out duration-500">
-                                        <p> <i class="fab fa-facebook-square mr-3"></i>Benedict Ashiedu</p>
+                                        <p> <i className="fab fa-facebook-square mr-3"></i>Benedict Ashiedu</p>
                                     </div>
                                 </a>
                                 <a target="_blank" href="https://www.instagram.com/invites/contact/?i=1ek3z3ocg3w5e&utm_content=5pe6sj" className="md:w-5/12">
                                     <div className="text-center bg-gray-900 rounded-lg p-4 mb-4 transform hover:-translate-y-1 hover:scale-105 transition ease-in-out duration-500">
-                                        <p> <i class="fab fa-instagram-square mr-3"></i>@pope_ashiedu</p>
+                                        <p> <i className="fab fa-instagram-square mr-3"></i>@pope_ashiedu</p>
                                     </div>
                                 </a>
 

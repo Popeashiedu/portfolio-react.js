@@ -9,7 +9,7 @@ function Home() {
     return <div className="h-full select-none">
         <Switch>
             <Route exact path="/">
-                <div className="mt-10 md:my-8 lg:my-12 xl:my-16">
+                <div className="mt-12 md:my-8 lg:my-12 xl:my-16">
                     <div className="bg-gray-800 p-4 md:p-8 rounded-lg">
                         <div className="flex flex-col md:flex-row items-center md:items-center">
                             <div className="w-6/12 sm:w-4/12 md:w-8/12 rounded-full bg-white">
@@ -38,14 +38,17 @@ function Home() {
                         </div>
                         <div></div>
                     </div>
-                    <Link to="/about" className="flex justify-end mt-2 items-center cursor-pointer bg-gray-900 h-8 rounded-lg">
+                    <div className="flex justify-end mt-2 items-center">
+                        <Link to="/about" className="flex mt-2 items-center cursor-pointer bg-gray-900 h-8 rounded-lg">
 
-                        <a className="pr-3">Continue</a>
-                        <FontAwesomeIcon
-                            icon={faLongArrowAltRight}
-                            className="mt-1"
-                        />
-                    </Link>
+                            <p className="pr-3">Continue</p>
+                            <FontAwesomeIcon
+                                icon={faLongArrowAltRight}
+                                className="mt-1"
+                            />
+                        </Link>
+                    </div>
+
                 </div>
             </Route>
         </Switch>

@@ -32,7 +32,8 @@ function Gallery() {
             image: w1,
             type: "Solo project",
             language: ["HTML5/CSS3", "Javascript", "Python/Django"],
-            url: "http://www.gloriousgraceministries.org.ng"
+            url: "http://www.gloriousgraceministries.org.ng",
+            showLanguage: false
         },
         {
             id: 2,
@@ -40,7 +41,8 @@ function Gallery() {
             image: w2,
             type: "Collaboration",
             language: ["HTML5/CSS3", "Javascript", "PHP/Laravel"],
-            url: "https://getviral.ml/"
+            url: "https://getviral.ml/",
+            showLanguage: false
         },
         {
             id: 3,
@@ -48,7 +50,8 @@ function Gallery() {
             image: w3,
             type: "Solo project",
             language: ["HTML5/CSS3", "Javascript", "Python/Django"],
-            url: "https://shadesnator.herokuapp.com/"
+            url: "https://shadesnator.herokuapp.com/",
+            showLanguage: false
         },
         {
             id: 4,
@@ -56,7 +59,8 @@ function Gallery() {
             image: w4,
             type: "Solo project",
             language: ["HTML5/CSS3", "Javascript", "Python/Django"],
-            url: "https://houseverify.herokuapp.com/"
+            url: "https://houseverify.herokuapp.com/",
+            showLanguage: false
         },
         {
             id: 5,
@@ -64,7 +68,8 @@ function Gallery() {
             image: w5,
             type: "Solo project",
             language: ["HTML5/CSS3", "Javascript", "Bootstrap"],
-            url: "https://flowrich-portfolio.netlify.app/"
+            url: "https://flowrich-portfolio.netlify.app/",
+            showLanguage: false
         },
         {
             id: 6,
@@ -72,7 +77,8 @@ function Gallery() {
             image: w6,
             type: "Solo project",
             language: ["HTML5/CSS3", "Javascript", "Bootstrap"],
-            url: "https://doe-portfolio.netlify.app/"
+            url: "https://doe-portfolio.netlify.app/",
+            showLanguage: false
         },
         {
             id: 7,
@@ -80,15 +86,17 @@ function Gallery() {
             image: w7,
             type: "Solo project",
             language: ["HTML5/CSS3", "Javascript", "Bootstrap"],
-            url: "https://mae-portfolio.netlify.app/"
+            url: "https://mae-portfolio.netlify.app/",
+            showLanguage: false
         },
         {
             id: 8,
             title: "Cosy lines furniture site",
             image: w8,
-            type: "Solo project",
+            type: "Collaboration",
             language: ["HTML5/CSS3", "Javascript", "Bootstrap"],
-            url: "https://cosy-furniture-site.netlify.app/"
+            url: "https://cosy-furniture-site.netlify.app/",
+            showLanguage: false
         },
         {
             id: 9,
@@ -96,30 +104,72 @@ function Gallery() {
             image: w9,
             type: "Solo project",
             language: ["HTML5/CSS3", "Javascript", "Bootstrap"],
-            url: "https://edu-app-landing-page.netlify.app"
+            url: "https://edu-app-landing-page.netlify.app",
+            showLanguage: false
         },
         ]
     )
 
-    let gallerySection = works.map(work =>
-        <div className="bg-gray-900 rounded-lg lg:w-5/12 mb-8 h-full" key={work.id} yar>
-            <a target="_target" href={work.url}>
-                <div className="w-full h-32 md:h-48 rounded-t-lg overflow-hidden">
-                    <img src={work.image} alt={work.title + " image"} className="w-full h-full rounded-t-lg transform hover:scale-125 transition duration-1000 ease-in-out object-cover object-top" />
-                </div>
-                <div className="p-4">
-                    <h1 className="font-bold text-base sm:text-lg capitalize">{work.title}</h1>
-                    <p>{work.type}</p>
-                    <ul className="mt-3">
-                        <li className="font-bold">Languages/Frameworks:</li>
 
-                        <li><FontAwesomeIcon icon={faCheck} className="text-xs mr-2" /> {work.language[0]}</li>
-                        <li><FontAwesomeIcon icon={faCheck} className="text-xs mr-2" />{work.language[1]}</li>
-                        <li><FontAwesomeIcon icon={faCheck} className="text-xs mr-2" />{work.language[2]}</li>
-                    </ul>
-                </div>
-            </a>
-        </div>)
+
+
+    const ItemLanguage = ({ language }) => {
+
+        return (
+            <ul className="mb-8 transform origin-top px-4 py-2 bg-gray-900 rounded-lg">
+                <li className="font-bold">Languages/Frameworks:</li>
+                {language.map((language) => {
+                    return (
+                        <li key={Math.random()}><FontAwesomeIcon icon={faCheck} className="text-xs mr-2" /> {language}</li>
+                    )
+                })}
+
+            </ul>
+        )
+
+
+
+    }
+
+
+    const GalleryItem = ({ work }) => {
+        return (
+            <div className="lg:w-5/12 h-full">
+                <a target="_target" href={work.url}>
+                    <div className="bg-gray-900  relative rounded-lg overflow-hidden" >
+
+                        <div className="w-full h-32 md:h-48 rounded-lg overflow-hidden">
+                            <img src={work.image} alt={work.title + " image"} className="w-full h-full rounded-t-lg transform hover:scale-125 transition duration-1000 ease-in-out object-cover object-top" />
+                        </div>
+                        <div className="absolute h-full w-full bg-black opacity-75 top-0">
+
+                        </div>
+                        <div className="p-4 absolute top-0 h-full w-full flex flex-col items-center justify-center">
+                            <h1 className="font-bold text-base sm:text-lg capitalize">{work.title}</h1>
+                            <p>{work.type}</p>
+                        </div>
+
+
+
+
+                    </div>
+                    <ItemLanguage language={work.language} toggler={work.showLanguage} />
+                </a>
+            </div >
+
+        )
+    }
+
+    const GallerySection = ({ works }) => {
+        return (
+            works.map(work => {
+                return (<GalleryItem work={work} key={work.id} />)
+            }
+
+            )
+        )
+
+    }
     return <div className="h-full">
         <Switch>
             <Route path="/gallery">
@@ -130,8 +180,7 @@ function Gallery() {
                                 <h1 className="font-bold text-center text-base md:text-lg">These are some of the live projects I have worked on</h1>
                             </div>
                             <div className="swiper-container md:flex flex-wrap justify-around">
-                                {gallerySection}
-
+                                <GallerySection works={works} />
                             </div>
                         </div>
                     </div>

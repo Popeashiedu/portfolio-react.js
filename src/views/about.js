@@ -43,13 +43,13 @@ function About() {
                                 icon={faLongArrowAltLeft}
                                 className="mt-1"
                             />
-                            <a className="pl-3">Home</a>
+                            <p className="pl-3">Home</p>
                         </Link>
 
 
                         <Link to="/resume" className="flex mt-2 items-center cursor-pointer bg-gray-900 h-8 rounded-lg">
 
-                            <a className="pr-3">Resume</a>
+                            <p className="pr-3">Resume</p>
                             <FontAwesomeIcon
                                 icon={faLongArrowAltRight}
                                 className="mt-1"
