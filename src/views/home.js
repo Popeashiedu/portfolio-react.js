@@ -16,7 +16,7 @@ function Home() {
                                 <img src={pope} alt="pope ashiedu image" className="rounded-full w-full h-full" />
                             </div>
                             <div className="mt-3 md:ml-4 w-full text-center md:text-left md:pl-4">
-                                <h1 className="md:text-2xl lg:text-4xl xl:text-5xl">Hi there, <br /> I am <strong>Benedict Ashiedu</strong> </h1>
+                                <h1 className="md:text-2xl lg:text-4xl xl:text-5xl">Hi there, <br /> I am <strong>Benedict Ashiedu.</strong> </h1>
                                 <div className="flex justify-between lg:w-11/12 xl:w-10/12 text-xs md:text-sm lg:text-base xl:text-lg md:mt-4 lg:mt-6">
                                     <div>
                                         <p className="my-4"><FontAwesomeIcon
