@@ -186,7 +186,7 @@ function Gallery() {
                     </div>
                     <div className="flex justify-between mt-2 items-center">
 
-                        <Link to="/resume" className="cursor-pointer flex items-center bg-gray-900 h-8 rounded-lg">
+                        <Link to="/resume" className="cursor-pointer flex items-center bg-gray-900 h-8 rounded-lg pb-4">
                             <FontAwesomeIcon
                                 icon={faLongArrowAltLeft}
                                 className="mt-1"
@@ -195,7 +195,7 @@ function Gallery() {
                         </Link>
 
 
-                        <Link to="/contact" className="flex mt-2 items-center cursor-pointer bg-gray-900 h-8 rounded-lg">
+                        <Link to="/contact" className="flex mt-2 items-center cursor-pointer bg-gray-900 h-8 rounded-lg pb-4">
 
                             <p className="pr-3">Contact</p>
                             <FontAwesomeIcon

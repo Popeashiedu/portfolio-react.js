@@ -50,12 +50,12 @@ function Contact() {
                     </div>
                     <div className="flex justify-between mt-2 items-center">
 
-                        <Link to="/gallery" className="cursor-pointer flex items-center bg-gray-900 h-8 rounded-lg">
+                        <Link to="/gallery" className="cursor-pointer flex items-center bg-gray-900 h-8 rounded-lg pb-4">
                             <FontAwesomeIcon
                                 icon={faLongArrowAltLeft}
                                 className="mt-1"
                             />
-                            <a className="pl-3">Gallery</a>
+                            <p className="pl-3">Gallery</p>
                         </Link>
 
                     </div>

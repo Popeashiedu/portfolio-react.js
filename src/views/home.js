@@ -9,7 +9,8 @@ function Home() {
     return <div className="h-full select-none">
         <Switch>
             <Route exact path="/">
-                <div className="mt-12 md:my-8 lg:my-12 xl:my-16">
+
+                <div className="flex flex-col justify-center h-full home-screen">
                     <div className="bg-gray-800 p-4 md:p-8 rounded-lg">
                         <div className="flex flex-col md:flex-row items-center md:items-center">
                             <div className="w-6/12 sm:w-4/12 md:w-8/12 rounded-full bg-white">
@@ -50,6 +51,8 @@ function Home() {
                     </div>
 
                 </div>
+
+
             </Route>
         </Switch>
     </div>

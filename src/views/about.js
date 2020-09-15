@@ -13,7 +13,7 @@ function About() {
     return <div className="h-full">
         <Switch>
             <Route path="/about">
-                <div className="mt-10 md:my-8 lg:my-12 xl:my-16">
+                <div className="flex flex-col justify-center h-full home-screen">
                     <div className="bg-gray-800 p-4 md:p-8 rounded-lg" >
                         <div className="overflow-y-scroll md:overflow-y-auto text-xs sm:text-sm lg:text-base about-div">
                             {/* <p className="">A lover of problem solving, critical thinking and challenges. </p> <br /> */}

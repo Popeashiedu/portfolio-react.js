@@ -106,7 +106,7 @@ function Resume() {
                     </div>
                     <div className="flex justify-between mt-2 items-center">
 
-                        <Link to="/about" className="cursor-pointer flex items-center bg-gray-900 h-8 rounded-lg">
+                        <Link to="/about" className="cursor-pointer flex items-center bg-gray-900 h-8 rounded-lg pb-4">
                             <FontAwesomeIcon
                                 icon={faLongArrowAltLeft}
                                 className="mt-1"
@@ -115,7 +115,7 @@ function Resume() {
                         </Link>
 
 
-                        <Link to="/gallery" className="flex mt-2 items-center cursor-pointer bg-gray-900 h-8 rounded-lg">
+                        <Link to="/gallery" className="flex mt-2 items-center cursor-pointer bg-gray-900 h-8 rounded-lg pb-4">
 
                             <p className="pr-3">My work</p>
                             <FontAwesomeIcon
